@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p>The length property provides an easy way to append new elements to an array without using the push() method.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits[fruits.length] = "Lemon";
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>
+// giải thích: 
+//const fruits = ["Banana", "Orange", "Apple"];
+fruits em khai báo bên trên là 1 mảng gồm 3 phần tử.
+vậy nên fruits.length nó sẽ bằng 3
+fruits.length có ý nghĩa là lấy ra số phần tủ của mảng
+ fruits[fruits.length] = "Lemon"; 
+sẽ tương đương với đoạn dưới như sau
+fruits[3] = "Lemon";
+nghĩa là nó sẽ tạo ra thêm 1 phần tử thứ 3 nữa và gán giá trị "Lemon" vào đó

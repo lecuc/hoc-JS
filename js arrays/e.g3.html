@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p>Adding elements with high indexes can create undefined "holes" in an array.</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[6] = "Lemon";
+
+let fLen = fruits.length;
+let text = "";
+for (i = 0; i < fLen; i++) {
+  text += fruits[i] + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+// nếu mảng rỗng k có giá trị khai báo sẽ in ra undefined >>Khi bạn gán giá trị
+ cho một chỉ số cao hơn chỉ số cuối cùng hiện tại trong mảng, JavaScript tự động tạo
+  các phần tử undefined ở các chỉ số chưa được gán — tạo thành các "holes" (lỗ rỗng) trong mảng
+  
