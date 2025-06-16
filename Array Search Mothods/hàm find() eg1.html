@@ -1,0 +1,20 @@
+//find() Trả về phần tử đầu tiên thỏa điều kiện (dùng hàm callback). Nếu không tìm thấy, trả về undefined
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+
+<p id="demo"></p>
+
+<script>
+const people = [
+  { name: "Alice", age: 20 },
+  { name: "Bob", age: 25 }
+];
+const result = people.find(person => person.age > 21);
+console.log(result); // { name: "Bob", age: 25 }
+document.getElementById("demo").innerHTML = result ? result.name + " - " + result.age : "Không tìm thấy";
+//note: person => person.age > 21 là một arrow function (hàm mũi tên).
+</script>
+
+</body>

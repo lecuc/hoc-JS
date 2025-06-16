@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<p id="demo"></p>
+
+<script>
+// Khai báo mảng people
+const people = [
+  { name: "Alice", age: 20 },
+  { name: "Bob", age: 25 }
+];
+
+// Dùng function truyền thống để kiểm tra tuổi
+function isOlderThan21(person) {
+  return person.age > 21;
+}
+
+// Tìm người đầu tiên lớn hơn 21
+const result = people.find(isOlderThan21);
+
+// Hiển thị kết quả lên trang
+if (result) {
+  document.getElementById("demo").innerHTML = result.name + " - " + result.age;
+} else {
+  document.getElementById("demo").innerHTML = "Không tìm thấy";
+}
+</script>
+
+</body>
+</html>
