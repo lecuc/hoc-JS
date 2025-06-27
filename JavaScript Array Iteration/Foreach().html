@@ -1,0 +1,35 @@
+//forEach() hàm xử lý từng phần tử
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+
+// function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+Hàm myFunction được truyền 3 tham số:
+
+value: giá trị hiện tại trong mảng.
+
+index: chỉ số (vị trí) của phần tử.
+
+array: chính là mảng ban đầu (numbers).
+
+Trong thân hàm:
+
+Mỗi lần gọi, nó cộng thêm value và thẻ <br> vào biến txt, để tạo chuỗi HTML xuống dòng.
