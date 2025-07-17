@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Error Handling</h2>
+
+<p>How to use <b>catch</b> to display an error.</p>
+
+<p id="demo"></p>
+
+<script>
+try {
+  adddlert("Welcome guest!");  //Đây là một lỗi cố ý: adddlert không phải là một hàm hợp lệ (sai chính tả của alert).
+
+//Vì JavaScript không tìm thấy hàm adddlert(), nên sẽ phát sinh lỗi (error).
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.message;
+}
+
+//Khi lỗi xảy ra, nó sẽ bị "bắt" bởi catch, và biến err chứa thông tin lỗi.
+
+//err.message là phần thông báo lỗi (message) ví dụ: "adddlert is not defined".
+</script>
+
+</body>
+</html>
+//
+Giải thích từng phần:
+🔸 try và catch:
+try: Chạy đoạn mã bên trong. Nếu có lỗi xảy ra, sẽ nhảy sang catch.
+
+catch(err): Bắt lỗi và xử lý lỗi đó. Biến err chứa thông tin về lỗi.
